@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColorHint="#000000" />
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Password"
+        android:hint="@string/Password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHint="#000000" />
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_background"
-        android:text="Login"
+        android:text="@string/log_in"
         android:textColor="#000000" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Don't have any account? Sign Up"
+        android:text="@string/Dont_have_any_account_SignUp"
         android:textColor="#000000"
         android:textColorHint="#000000" />
     <TextView
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Forget password"
+        android:text="@string/Forget_password"
         android:textColor="#000000"
         android:textColorHint="#000000" />
 

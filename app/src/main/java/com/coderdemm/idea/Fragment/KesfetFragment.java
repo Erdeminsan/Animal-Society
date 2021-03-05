@@ -3,9 +3,11 @@ package com.coderdemm.idea.Fragment;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +35,7 @@ public class KesfetFragment extends Fragment {
     private List<Kesfet> kesfetlist;
     private List<String> followingList;
     FirebaseUser firebaseUser;
+    private SwipeRefreshLayout swipeRefreshLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,6 +43,8 @@ public class KesfetFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_kesfet, container, false);
 
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+
+
 
 
         recyclerView=view.findViewById(R.id.recycler_view);
@@ -51,6 +56,15 @@ public class KesfetFragment extends Fragment {
         recyclerView.setAdapter(kesfetAdapter);
 
         checkFollowing();
+
+        swipeRefreshLayout=view.findViewById(R.id.swiperefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                kesfetAdapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
 
         return view;
 

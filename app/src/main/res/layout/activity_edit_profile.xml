@@ -37,7 +37,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit Profile"
+                    android:text="@string/edit_profile"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:textStyle="bold"
@@ -46,16 +46,16 @@
                     android:layout_toEndOf="@+id/close"/>
 
                 <TextView
+                    android:id="@+id/save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SAVE"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/save"
-                    android:textSize="16sp"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/save"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
 
 
             </RelativeLayout>
@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chenge Photo"
+            android:text="@string/change_photo"
             android:layout_gravity="center"
             android:id="@+id/tv_change"
             android:textColor="@color/colorPrimary"
@@ -91,20 +91,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/fullname"
-            android:hint="Full name"
+            android:hint="@string/fullname"
             android:layout_marginTop="20dp"
             app:met_floatingLabel="normal" />
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username"
-            android:hint="Username"
+            android:hint="@string/username"
             app:met_floatingLabel="normal"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bio"
-            android:hint="Bio"
+            android:hint="@string/bio"
             android:layout_marginTop="20dp"
             app:met_floatingLabel="normal" />
 

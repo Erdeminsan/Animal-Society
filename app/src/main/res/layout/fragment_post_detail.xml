@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textStyle="bold"
-                    android:text="Photo"
+                    android:text="@string/photo"
                     android:textColor="@color/colorPrimaryDark"/>
 
 

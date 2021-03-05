@@ -2,4 +2,36 @@
     <string name="app_name">"Pet Society"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">LOG IN</string>
+    <string name="register">REGİSTER</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Forget_password">Forget password</string>
+    <string name="Dont_have_any_account_SignUp">"Don't have any account? Sign Up"</string>
+    <string name="Already_have_an_account_Log_In">"Already have an account?Log In"</string>
+    <string name="username">Username</string>
+    <string name="usernames">username</string>
+    <string name="fullname">Full name</string>
+    <string name="add_comment">Add comment</string>
+    <string name="post">Post</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">SAVE</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="bio">Bio</string>
+    <string name="settings">"  Settings"</string>
+    <string name="logout">"  Logout"</string>
+    <string name="description">Description</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="update_password">Update Password</string>
+    <string name="pet_society">Pet Society</string>
+    <string name="kesfet">Discover</string>
+    <string name="notification">Notification</string>
+    <string name="photo">Photo</string>
+    <string name="posts">posts</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="search">Search...</string>
+    <string name="view_comments">View all 20 comments</string>
+
+
 </resources>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">"Pet Society"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Giriş yap</string>
+    <string name="register">Kayıt ol</string>
+    <string name="Email">Email</string>
+    <string name="Password">Şifre</string>
+    <string name="Forget_password">Şifremi unuttum</string>
+    <string name="Dont_have_any_account_SignUp">"Bir hesabın yok mu?Kayıt ol"</string>
+    <string name="Already_have_an_account_Log_In">"Bir hesaba sahip misin?Giriş yap"</string>
+    <string name="username">Kullanıcı adı</string>
+    <string name="usernames">kullanıcı adı</string>
+    <string name="fullname">İsim</string>
+    <string name="add_comment">Yorum eklet</string>
+    <string name="post">İleti</string>
+    <string name="edit_profile">Profil Düzenle</string>
+    <string name="save">Kaydet</string>
+    <string name="change_photo">Fotoğraf değiştir</string>
+    <string name="bio">Bio</string>
+    <string name="settings">"  Ayarlar"</string>
+    <string name="logout">"  Çıkış yap"</string>
+    <string name="description">Açıklama</string>
+    <string name="delete_account">Hesabı sil</string>
+    <string name="update_password">Şifre yenile</string>
+    <string name="pet_society">Pet Society</string>
+    <string name="kesfet">Kesfet</string>
+    <string name="notification">Bildirim</string>
+    <string name="photo">Fotoğraf</string>
+    <string name="posts">posts</string>
+    <string name="followers">takipçi</string>
+    <string name="following">takip edilen</string>
+    <string name="search">Arama...</string>
+    <string name="view_comments">View all 20 comments</string>
+
+
+</resources>

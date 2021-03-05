@@ -21,6 +21,7 @@
             android:id="@+id/toolbar"
             android:background="?android:attr/windowBackground">
 
+
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

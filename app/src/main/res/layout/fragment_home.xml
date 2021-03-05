@@ -31,7 +31,7 @@
                   android:layout_marginLeft="85dp"
                   android:layout_marginEnd="215dp"
 
-                  android:text="Pet Society"
+                  android:text="@string/pet_society"
                   android:textAlignment="center"
                   android:textColor="#000000"
                   android:textSize="24sp"
@@ -56,10 +56,18 @@
 
   </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bar" />
+        android:layout_height="670dp"
+        android:layout_marginTop="53dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bar" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </RelativeLayout>

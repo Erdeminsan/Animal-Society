@@ -67,6 +67,16 @@ public class HomeFragment extends Fragment {
             }
         });
         checkFollowing();
+
+        swipeRefreshLayout=view.findViewById(R.id.swiperefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                postAdapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
         return view;
     }
 

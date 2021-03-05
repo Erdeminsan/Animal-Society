@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Username"
+        android:hint="@string/username"
         android:padding="10dp"
         android:textColorHint="#000000" />
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Full Name"
+        android:hint="@string/fullname"
         android:padding="10dp"
         android:textColorHint="#000000" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColorHint="#000000" />
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
-        android:hint="Password"
+        android:hint="@string/Password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHint="#000000" />
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_background"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="#000000" />
 
     <TextView
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:text="Already have an account?Log In"
+        android:text="@string/Already_have_an_account_Log_In"
         android:textColor="#000000"
         android:textColorHint="#000000" />
 
