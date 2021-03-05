@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.coderdemm.idea.Adapter.KesfetAdapter;
@@ -15,6 +17,7 @@ import com.coderdemm.idea.Model.Notification;
 import com.coderdemm.idea.Model.Post;
 import com.coderdemm.idea.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class KesfetActivity extends AppCompatActivity {
@@ -30,21 +34,25 @@ public class KesfetActivity extends AppCompatActivity {
     private KesfetAdapter kesfetAdapter;
     private List<Kesfet> kesfetlist;
     private List<String> followingList;
+    FirebaseUser firebaseUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kesfet);
 
+        firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+
 
         recyclerView=findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,3);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(gridLayoutManager);
         kesfetlist=new ArrayList<>();
         kesfetAdapter=new KesfetAdapter(this,kesfetlist);
         recyclerView.setAdapter(kesfetAdapter);
 
         checkFollowing();
+
     }
 
 
@@ -57,7 +65,7 @@ public class KesfetActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 followingList.clear();
-                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot:snapshot.getChildren()) {
                     followingList.add(dataSnapshot.getKey());
                 }
                 readPosts();
@@ -79,8 +87,9 @@ public class KesfetActivity extends AppCompatActivity {
                 kesfetlist.clear();
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Kesfet kesfet=dataSnapshot.getValue(Kesfet.class);
-                    kesfetlist.add(kesfet);
+                        kesfetlist.add(kesfet);
                 }
+                Collections.reverse(kesfetlist);
                 kesfetAdapter.notifyDataSetChanged();
             }
 
@@ -90,5 +99,5 @@ public class KesfetActivity extends AppCompatActivity {
             }
         });
     }
+    }
 
-}

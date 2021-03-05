@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.coderdemm.idea.Activity.CommentActivity;
 import com.coderdemm.idea.Activity.FollowersActivity;
 import com.coderdemm.idea.Activity.KesfetActivity;
+import com.coderdemm.idea.Activity.StartActivity;
 import com.coderdemm.idea.Fragment.PostDetailFragment;
 import com.coderdemm.idea.Fragment.ProfileFragment;
 import com.coderdemm.idea.Model.Kesfet;
@@ -96,8 +97,8 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
                 SharedPreferences.Editor editor=mContext.getSharedPreferences("PREFS",Context.MODE_PRIVATE).edit();
                 editor.putString("profiled",kesfet.getPublisher());
                 editor.apply();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_kesfet,new ProfileFragment()).commit();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
             }
         });
 
@@ -109,7 +110,7 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
                 editor.putString("profiled",kesfet.getPublisher());
                 editor.apply();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_kesfet,new ProfileFragment()).commit();
             }
         });
         holder.publisher.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +121,7 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
                 editor.putString("profiled",kesfet.getPublisher());
                 editor.apply();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_kesfet,new ProfileFragment()).commit();
             }
         });
         holder.post_image.setOnClickListener(new View.OnClickListener() {
@@ -131,7 +132,7 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
                 editor.putString("postid",kesfet.getPostid());
                 editor.apply();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PostDetailFragment()).commit();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_kesfet,new PostDetailFragment()).commit();
             }
         });
 
@@ -191,7 +192,8 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
             }
         });
 
-        holder.more.setOnClickListener(new View.OnClickListener() {
+
+/*holder.moree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 PopupMenu popupMenu=new PopupMenu(mContext,view);
@@ -227,7 +229,8 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
                 }
                 popupMenu.show();
             }
-        });
+        });*/
+
     }
 
     @Override
@@ -237,7 +240,7 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        public ImageView image_profile,post_image,like,comment,save,more;
+        public ImageView image_profile,post_image,like,comment,save,moree;
         public TextView username,likes,publisher,description,comments;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -252,7 +255,7 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
             publisher=itemView.findViewById(com.coderdemm.idea.R.id.publisher);
             description=itemView.findViewById(com.coderdemm.idea.R.id.description);
             comments=itemView.findViewById(com.coderdemm.idea.R.id.commnets);
-            more=itemView.findViewById(R.id.more);
+            //moree=itemView.findViewById(R.id.moree);
         }
     }
     private  void getComment(String postid,TextView comments){
@@ -407,3 +410,4 @@ public class KesfetAdapter extends RecyclerView.Adapter<KesfetAdapter.ViewHolder
     }
 
 }
+

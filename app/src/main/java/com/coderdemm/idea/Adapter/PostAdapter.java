@@ -23,7 +23,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.coderdemm.idea.Activity.CommentActivity;
 import com.coderdemm.idea.Activity.FollowersActivity;
+import com.coderdemm.idea.Activity.MainActivity;
 import com.coderdemm.idea.Activity.StartActivity;
+import com.coderdemm.idea.Fragment.HomeFragment;
 import com.coderdemm.idea.Fragment.PostDetailFragment;
 import com.coderdemm.idea.Fragment.ProfileFragment;
 import com.coderdemm.idea.Model.Post;
@@ -202,11 +204,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                                 editPost(post.getPostid());
                                 return true;
                             case R.id.delete:
+                                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
                                 FirebaseDatabase.getInstance().getReference("Posts").child(post.getPostid()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
                                             Toast.makeText(mContext, "Deleted", Toast.LENGTH_SHORT).show();
+
                                         }
                                     }
                                 });

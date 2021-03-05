@@ -36,8 +36,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="675dp"
-        android:layout_below="@+id/bar"
-        android:visibility="invisible"/>
+        android:layout_below="@+id/bar" />
 
 
 </RelativeLayout>

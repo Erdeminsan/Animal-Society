@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
 
 
     private ImageView kesfet;
-   // private SwipeRefreshLayout swipeRefreshLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,11 +74,10 @@ public class HomeFragment extends Fragment {
         });
 
         checkFollowing();
-
-
         return view;
 
     }
+
 
     private  void  checkFollowing(){
         followingList=new ArrayList<>();

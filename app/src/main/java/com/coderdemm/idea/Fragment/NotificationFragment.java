@@ -3,6 +3,7 @@ package com.coderdemm.idea.Fragment;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,12 +43,13 @@ public class NotificationFragment extends Fragment {
        recyclerView=view.findViewById(R.id.recycler_view);
        recyclerView.setHasFixedSize(true);
        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        notificationsList=new ArrayList<>();
-        notificationAdapter=new NotificationAdapter(getContext(),notificationsList);
-        recyclerView.setAdapter(notificationAdapter);
+       recyclerView.setLayoutManager(linearLayoutManager);
+       notificationsList=new ArrayList<>();
+       notificationAdapter=new NotificationAdapter(getContext(),notificationsList);
+       recyclerView.setAdapter(notificationAdapter);
 
        readNotifications();
+
 
 
         return view;

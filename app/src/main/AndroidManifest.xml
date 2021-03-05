@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Idea">
-        <activity android:name=".Activity.KesfetActivity"></activity>
+        <activity android:name=".Activity.UserSettingActivity"></activity>
+        <activity android:name=".Activity.KesfetActivity" />
         <activity android:name=".Activity.OptionsActivity" />
         <activity android:name=".Activity.FollowersActivity" />
         <activity android:name=".Activity.EditProfileActivity" />
@@ -35,7 +36,7 @@
         </activity>
         <activity
             android:name=".Activity.StartActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

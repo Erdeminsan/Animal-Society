@@ -14,7 +14,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/lineer_layout_background">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,9 +67,9 @@
                 android:layout_alignParentEnd="true"
                 android:id="@+id/save"
                 android:src="@drawable/ic_save_black"/>
-            
+
         </RelativeLayout>
-        
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,14 +92,14 @@
             android:textColor="@color/colorPrimaryDark"/>
 
         <TextView
+            android:id="@+id/commnets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
-            android:id="@+id/commnets"
             android:text="View all 20 comments"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimaryDark" />
 
     </LinearLayout>
 
