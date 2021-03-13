@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.coderdemm.idea">
+    package="com.coderdemm.society"
+    android:versionCode="5"
+    android:versionName="1.5">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -12,21 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Idea">
-        <activity android:name=".Activity.UserSettingActivity" />
-        <activity android:name=".Activity.KesfetActivity" />
-        <activity android:name=".Activity.OptionsActivity" />
-        <activity android:name=".Activity.FollowersActivity" />
-        <activity android:name=".Activity.EditProfileActivity" />
-        <activity android:name=".Activity.CommentActivity" />
-        <activity android:name=".Activity.PostActicity" />
-        <activity android:name=".Activity.MainActivity" />
+        <activity android:name="com.coderdemm.society.Activity.UserSettingActivity" />
+        <activity android:name="com.coderdemm.society.Activity.KesfetActivity" />
+        <activity android:name="com.coderdemm.society.Activity.OptionsActivity" />
+        <activity android:name="com.coderdemm.society.Activity.FollowersActivity" />
+        <activity android:name="com.coderdemm.society.Activity.EditProfileActivity" />
+        <activity android:name="com.coderdemm.society.Activity.CommentActivity" />
+        <activity android:name="com.coderdemm.society.Activity.PostActicity" />
+        <activity android:name="com.coderdemm.society.Activity.MainActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".Activity.RegisterActivity" />
-        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name="com.coderdemm.society.Activity.RegisterActivity" />
+        <activity android:name="com.coderdemm.society.Activity.LoginActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.coderdemm.society.SplashScreen"
             android:theme="@style/splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.StartActivity"
+            android:name="com.coderdemm.society.Activity.StartActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 

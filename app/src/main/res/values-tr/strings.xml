@@ -13,7 +13,7 @@
     <string name="usernames">kullanıcı adı</string>
     <string name="fullname">İsim</string>
     <string name="add_comment">Yorum eklet</string>
-    <string name="post">İleti</string>
+    <string name="post">gönder</string>
     <string name="edit_profile">Profil Düzenle</string>
     <string name="save">Kaydet</string>
     <string name="change_photo">Fotoğraf değiştir</string>
@@ -27,7 +27,7 @@
     <string name="kesfet">Kesfet</string>
     <string name="notification">Bildirim</string>
     <string name="photo">Fotoğraf</string>
-    <string name="posts">posts</string>
+    <string name="posts">gönderi</string>
     <string name="followers">takipçi</string>
     <string name="following">takip edilen</string>
     <string name="search">Arama...</string>
