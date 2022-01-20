@@ -1,4 +1,4 @@
-# Pet-Society
+# Animal-Society
 
 Hello my dear animal lovers;
 We have been trying to present a brand new social media application for our animal friends for a long time and now we are here.
